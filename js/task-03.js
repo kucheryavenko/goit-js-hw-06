@@ -12,3 +12,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const createList = images.reduce((acc, image) => {
+  return acc + `<li class="item"><img class="img" width="800" src=${image.url} alt=${image.alt} /></li>`
+}, "");
+
+const list = document.querySelector('.gallery');
+
+list.insertAdjacentHTML('beforeend', createList);
+
+
+
