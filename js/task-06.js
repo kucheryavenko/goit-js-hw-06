@@ -3,7 +3,7 @@ const validLength = document.querySelector('input[data-length="6"]');
 
 function onInputBlur(event) {
     
-    if (event.currentTarget.value.length >= validLength.dataset.length) {
+    if (event.currentTarget.value.length === Number(validLength.dataset.length)) {
         input.classList.remove('invalid');
         input.classList.add('valid');
     } else {
