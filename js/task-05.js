@@ -1,6 +1,8 @@
 const input = document.querySelector('#name-input');
 const output = document.querySelector('#name-output');
 
+input.addEventListener('input', valueInput);
+
 function valueInput(event) { 
     if (event.currentTarget.value !== "") {
         output.textContent = event.currentTarget.value;
@@ -9,4 +11,4 @@ function valueInput(event) {
     };
 };
 
-input.addEventListener('input', valueInput)
+input.addEventListener('input', valueInput);

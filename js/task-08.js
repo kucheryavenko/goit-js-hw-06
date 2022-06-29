@@ -11,3 +11,8 @@
 // элементам формы используй свойство elements.
 // 5. Выведи обьект с введенными данными в консоль и очисти 
 // значения полей формы методом reset.
+
+const form = document.querySelector('.login-form');
+console.log(form);
+
+form.addEventListener('submit');
