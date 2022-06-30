@@ -13,5 +13,5 @@ function onChangeColor() {
 
   body.style.backgroundColor = randomColor;
   textColor.textContent = randomColor;
-}
+};
 
