@@ -10,5 +10,3 @@ function valueInput(event) {
         output.textContent = "Anonymous";
     };
 };
-
-input.addEventListener('input', valueInput);
