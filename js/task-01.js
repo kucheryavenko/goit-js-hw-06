@@ -1,16 +1,18 @@
-const itemsCategories = document.querySelector('#categories').children;
-console.log('Number of categories: ', itemsCategories.length); // Number of categories: 3
+const listEl = document.querySelector('#categories');
 
-const titlesCategories = [...itemsCategories].map(element => element.querySelector('h2'));
+const itemCategories = listEl.children.length;
+console.log('Number of categories: ', itemCategories);
 
-const elementsCategories = [...itemsCategories].map(element => element.querySelectorAll('li'));
+const getInfoCategories = [...listEl.children].map((item) => {
+    const titleCategories = item.firstElementChild.textContent;
+    const elmentsInCategories = item.lastElementChild.children.length;
 
-console.log(`Category: ${titlesCategories[0].textContent}`); // Category: Animals
-console.log(`Elements: ${elementsCategories[0].length}`); // Elements: 4
+    console.log('Category: ', titleCategories);
+    console.log('Elements: ', elmentsInCategories);
+});
 
-console.log(`Category: ${titlesCategories[1].textContent}`); // Category: Products
-console.log(`Elements: ${elementsCategories[1].length}`); // Elements: 3
 
-console.log(`Category: ${titlesCategories[2].textContent}`); // Category: Technologies
-console.log(`Elements: ${elementsCategories[2].length}`); // Elements: 5
+
+
+
 
